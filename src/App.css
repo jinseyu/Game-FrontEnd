@@ -1,3 +1,79 @@
+.webView{
+    width: 768px;
+    height: 715px;
+    margin: 0 auto;
+}
+
+.start{
+  margin: 125px auto;
+}
+
+.start h2 {
+  position: relative;
+  top: 40px;
+  font-weight: bold;
+}
+
+header > h2{
+  margin: 40px auto;
+  font-weight: bold;
+}
+
+.main{
+  height: 465px;
+  background: #ffffff;
+}
+
+.main_content{
+  margin: 20px 110px;
+  border: 2px solid #111;
+  height: 95%;
+}
+
+
+.tab_content{
+  background: rgb(224, 224, 224);
+  height: 90.5%;
+}
+
+header, footer{
+  height: 125px;
+  border: 1px solid #111;
+}
+
+/* Game2 */
+
+table td {
+  border: 1px solid #111;
+}
+
+
+.tb2{
+  height: 300px;
+  background: #fde38e;
+  width: 350px;
+  margin: 30px auto;
+}
+
+.tb2 td {
+  border: 1px solid #c7c0c0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .App {
   text-align: center;
 }
