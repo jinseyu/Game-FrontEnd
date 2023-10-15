@@ -74,6 +74,17 @@ table td {
   border: 1px solid #c7c0c0;
 }
 
+/* Game3.js */
+.tb3{
+  height: 300px;
+  background: rgb(52, 152, 219);
+  width: 350px;
+  margin: 30px auto;
+}
+
+.tb3 td {
+  border: 1px solid #ffffff;
+}
 
 
 
