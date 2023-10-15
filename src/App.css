@@ -35,6 +35,11 @@ header > h2{
   height: 90.5%;
 }
 
+p{
+  position: relative;
+  top: 15px;
+}
+
 header, footer{
   height: 125px;
   border: 1px solid #111;
@@ -57,6 +62,17 @@ table td {
   border: 1px solid #ffffff;
 }
 
+/* Game2.js */
+.tb2{
+  height: 300px;
+  background: #fde38e;
+  width: 350px;
+  margin: 30px auto;
+}
+
+.tb2 td {
+  border: 1px solid #c7c0c0;
+}
 
 
 
