@@ -74,6 +74,13 @@ table td {
   border: 1px solid #c7c0c0;
 }
 
+.black {
+  background: #111;
+}
+
+
+
+
 /* Game3.js */
 .tb3{
   height: 300px;

@@ -83,6 +83,7 @@ function Content() {
   );
 }
 
+
 function TabContent(props) {
   return <>{[<Game1 />, <Game2 />, <Game3 />, <Game4 />][props.tab]}</>;
 }
