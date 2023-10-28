@@ -64,9 +64,9 @@ table td {
 
 /* Game2.js */
 .tb2{
-  height: 300px;
+  height: 330px;
   background: #fde38e;
-  width: 350px;
+  width: 330px;
   margin: 30px auto;
 }
 
@@ -76,6 +76,14 @@ table td {
 
 .black {
   background: #111;
+  border-radius: 50%;
+  margin: 40px;
+}
+
+.white{
+  background: #eee;
+  border-radius: 50%;
+  margin: 40px;
 }
 
 
