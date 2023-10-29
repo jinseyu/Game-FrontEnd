@@ -39,14 +39,10 @@ function Game2() {
 
     const situationData = encodeGameBoard();
 
-    axios
-      .post("https://jsonplaceholder.typicode.com/posts", {
-        // 임시 서버
+    axios.post("https://jsonplaceholder.typicode.com/posts", { // 임시 서버
         color: newColor === "black" ? "1" : "2", // 1이면 흑, 2이면 백
-        // location : { x : 14 - i, y : j}, // 왼쪽 아래 (1,1) 기준 좌표
-        location: 14 - i + "," + j,
-        // (13,1) => (1,1) , (13,2) => (1,2)
-        // (12,1) => (2,1) , (12,2) => (2,2)
+        // 왼쪽 위 (0,0) 기준
+        location : (i -1) + "," + (j-1),
         situation: situationData, // 게임 상황
       })
       .then((res) => {
