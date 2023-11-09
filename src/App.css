@@ -1,65 +1,69 @@
 .webView{
-    width: 768px;
-    height: 715px;
-    margin: 0 auto;
+  width: 768px;
+  height: 715px;
+  margin: 0 auto;
 }
 
 .start{
-  margin: 125px auto;
+margin: 125px auto;
 }
 
 .start h2 {
-  position: relative;
-  top: 40px;
-  font-weight: bold;
+position: relative;
+top: 40px;
+font-weight: bold;
 }
 
 header > h2{
-  margin: 40px auto;
-  font-weight: bold;
+margin: 40px auto;
+font-weight: bold;
 }
 
 .main{
-  height: 465px;
-  background: #ffffff;
+height: 465px;
+background: #ffffff;
 }
 
 .main_content{
-  margin: 20px 110px;
-  border: 2px solid #111;
-  height: 95%;
+margin: 20px 110px;
+border: 2px solid #111;
+height: 95%;
 }
 
-.tab_content{
+.tab_content {
   background: rgb(224, 224, 224);
-  height: 90.5%;
+  height : 90.5%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
 }
+
 
 p{
-  position: relative;
-  top: 15px;
+position: relative;
+top: 15px;
 }
 
 header, footer{
-  height: 125px;
-  border: 1px solid #111;
+height: 125px;
+border: 1px solid #111;
 }
 
 
 /* Game1.js */
 table td {
-  border: 1px solid #111;
+border: 1px solid #111;
 }
 
 .tb1{
-  height: 300px;
-  background: #000000;
-  width: 350px;
-  margin: 30px auto;
+height: 300px;
+background: #000000;
+width: 350px;
+margin: 30px auto;
 }
 
 .tb1 td {
-  border: 1px solid #ffffff;
+border: 1px solid #ffffff;
 }
 
 /* Game2.js */
@@ -71,16 +75,16 @@ table td {
 }
 
 .tb2 td {
-  border: 1px solid #c7c0c0;
+border: 1px solid #c7c0c0;
 }
 
 .black {
-  background: #111;
-  border-radius: 50%;
-  margin: 40px;
+background: #111;
+border-radius: 50%;
+margin: 40px;
 }
 
-.white{
+.white {
   background: #eee;
   border-radius: 50%;
   margin: 40px;
@@ -91,33 +95,41 @@ table td {
 
 /* Game3.js */
 .tb3{
-  height: 300px;
-  background: rgb(52, 152, 219);
-  width: 350px;
-  margin: 30px auto;
+height: 300px;
+background: rgb(52, 152, 219);
+width: 350px;
+margin: 30px auto;
 }
 
 .tb3 td {
-  border: 1px solid #ffffff;
+border: 1px solid #ffffff;
 }
 
 /* Game4.js */
 .tb4{
-  height: 300px;
-  background: rgb(108, 179, 138);
-  width: 350px;
-  margin: 30px auto;
+height: 300px;
+background: rgb(108, 179, 138);
+width: 350px;
+margin: 30px auto;
 }
 
 .tb4 td {
-  border: 1px solid #c7c0c0;
+border: 1px solid #c7c0c0;
 }
 
 
 
 
 
-/* ----- */
+
+
+
+
+
+
+
+
+
 
 .App {
   text-align: center;
