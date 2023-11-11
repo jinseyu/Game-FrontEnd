@@ -4,7 +4,6 @@ import axios from "axios";
 // 오목
 function Game2() {
   var col = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
-
   let [start, setStart] = useState(true);
   var [clickedCell, setClickedCell] = useState([]); // 클릭한 칸의 좌표
   let [color, setColor] = useState(""); // 현재 돌의 색상
@@ -78,8 +77,16 @@ function Game2() {
     useEffect(() => {
       setTimeout(() => {
         setAlert(false)
+
+        let count = 0;
+        // 클릭할때마다 돌의 색상을 투명하게 바꾸기
+        if (clickedCell.length > 0) {
+          let { i, j } = clickedCell[clickedCell.length-1];
+          document.getElementById(`cell-${i}-${j}`).style.backgroundColor = 'transparent';
+          count++;
+        }
       }, 2000);
-    }, [alert]);
+    }, [alert, clickedCell]);
   
     // 다시 하기 버튼 클릭 시 modal 값을 false로 변경
     const resetBtn = () => {
@@ -98,8 +105,8 @@ function Game2() {
       {table ? window.location.reload('/game/2') : ''}
       
         <table className="tb2" onClick={() => { 
-        return setModal(true)  // 임시로 table 클릭 시 다시하기 모달창 나오도록
-        // return setAlert(true) // 임시로 table 클릭 시 3-3 경고창 나오도록
+        // return setModal(true)  // 임시로 table 클릭 시 다시하기 모달창 나오도록
+        return setAlert(true) // 임시로 table 클릭 시 3-3 경고창 나오도록
       }}>
           <tbody>
             {col.map(function (i) {
