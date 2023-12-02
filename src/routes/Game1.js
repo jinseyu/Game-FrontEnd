@@ -1,16 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // 지뢰찾기
 function Game1() {
   var row = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
   var [count, setCount] = useState(60);
 
-  setInterval(function(){
-    count -= 1;
-    if (count >= 0){
-      setCount(count)
-    }
-  }, 1000);
+  useEffect(() => {
+    let a = setInterval(function () {
+      count -= 1;
+      if (count >= 0) {
+        setCount(count);
+      }
+    }, 1000);
+  
+    return () => {
+      clearTimeout(a);
+    };
+  }, []);
 
   return (
     <div>
