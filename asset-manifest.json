@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "https://jinseyu.github.io/Game-FrontEnd/static/css/main.67ce4f27.css",
-    "main.js": "https://jinseyu.github.io/Game-FrontEnd/static/js/main.a9bd2fe3.js",
+    "main.css": "https://jinseyu.github.io/Game-FrontEnd/static/css/main.ae4c1c02.css",
+    "main.js": "https://jinseyu.github.io/Game-FrontEnd/static/js/main.fc704ea7.js",
     "static/js/787.f587e8d5.chunk.js": "https://jinseyu.github.io/Game-FrontEnd/static/js/787.f587e8d5.chunk.js",
     "index.html": "https://jinseyu.github.io/Game-FrontEnd/index.html",
-    "main.67ce4f27.css.map": "https://jinseyu.github.io/Game-FrontEnd/static/css/main.67ce4f27.css.map",
-    "main.a9bd2fe3.js.map": "https://jinseyu.github.io/Game-FrontEnd/static/js/main.a9bd2fe3.js.map",
+    "main.ae4c1c02.css.map": "https://jinseyu.github.io/Game-FrontEnd/static/css/main.ae4c1c02.css.map",
+    "main.fc704ea7.js.map": "https://jinseyu.github.io/Game-FrontEnd/static/js/main.fc704ea7.js.map",
     "787.f587e8d5.chunk.js.map": "https://jinseyu.github.io/Game-FrontEnd/static/js/787.f587e8d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.67ce4f27.css",
-    "static/js/main.a9bd2fe3.js"
+    "static/css/main.ae4c1c02.css",
+    "static/js/main.fc704ea7.js"
   ]
 }
