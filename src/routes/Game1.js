@@ -28,7 +28,6 @@ function Game1() {
         })
         .join("/");
     };
-'- 5 - - 4 / - - - 0 5 / '
 
     axios
     .post("https://jsonplaceholder.typicode.com/posts", {
