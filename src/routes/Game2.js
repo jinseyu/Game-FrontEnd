@@ -50,7 +50,7 @@ function Game2() {
         .join("/");
     };
 
-    axios.post("https://jsonplaceholder.typicode.com/posts", { // 임시 서버
+    axios.post("http://15.164.164.15:8080/omok/place", { // 임시 서버
         color: newColor === "black" ? "1" : "2", // 1이면 흑, 2이면 백
         // 왼쪽 위 (0,0) 기준
         location : (i -1) + "," + (j-1),
@@ -74,19 +74,19 @@ function Game2() {
   }, []);
 
     // 테이블 클릭할 때마다 3 - 3 경고창 나오고 2초후 사라지도록
-    useEffect(() => {
-      setTimeout(() => {
-        setAlert(false)
+    // useEffect(() => {
+    //   setTimeout(() => {
+    //     setAlert(false)
 
-        let count = 0;
-        // 클릭할때마다 돌의 색상을 투명하게 바꾸기
-        if (clickedCell.length > 0) {
-          let { i, j } = clickedCell[clickedCell.length-1];
-          document.getElementById(`cell-${i}-${j}`).style.backgroundColor = 'transparent';
-          count++;
-        }
-      }, 2000);
-    }, [alert, clickedCell]);
+    //     let count = 0;
+    //     // 클릭할때마다 돌의 색상을 투명하게 바꾸기
+    //     if (clickedCell.length > 0) {
+    //       let { i, j } = clickedCell[clickedCell.length-1];
+    //       document.getElementById(`cell-${i}-${j}`).style.backgroundColor = 'transparent';
+    //       count++;
+    //     }
+    //   }, 2000);
+    // }, [alert, clickedCell]);
   
     // 다시 하기 버튼 클릭 시 modal 값을 false로 변경
     const resetBtn = () => {
@@ -98,7 +98,7 @@ function Game2() {
     <>
       <div>
       {modal ? <Modal reset={resetBtn}/> : null}
-      {alert ? <Caution/> : null}
+      {/*{alert ? <Caution/> : null}*/}
 
       {start === true ? <p>* 흑돌 먼저 시작 !</p> : <p>&nbsp;</p>}
 
