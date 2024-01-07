@@ -44,5 +44,6 @@
   "devDependencies": {
     "gh-pages": "^6.1.0"
   },
-  "homepage": "https://jinseyu.github.io/Game-FrontEnd/"
+  "homepage": "https://jinseyu.github.io/Game-FrontEnd/",
+  "proxy": "http://15.164.164.15:8080"
 }
