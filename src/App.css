@@ -1,9 +1,23 @@
-.webView{
-  width: 768px;
-  height: 715px;
-  margin: 0 auto;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&family=Rubik+Broken+Fax&family=Rubik+Doodle+Shadow&family=Rubik+Doodle+Triangles&display=swap');
+.web{
+  background: #000000;
 }
 
+.webView{
+  width: 768px;
+  height: 735px;
+  margin: 0 auto;
+  /* background-color: #3b2fec; */
+}
+
+.webView > header {
+  color: #eee;
+  font-family: 'Rubik Doodle Shadow', sans-serif;
+}
+
+.webView > header > h2{
+  font-size: 40px;
+}
 .start{
 margin: 125px auto;
 }
@@ -21,7 +35,6 @@ font-weight: bold;
 
 .main{
 height: 465px;
-background: #ffffff;
 }
 
 .main_content{
@@ -46,8 +59,23 @@ top: 15px;
 
 header, footer{
 height: 125px;
-border: 1px solid #111;
+border: 3px solid #000000;
 }
+
+footer {
+  display: flex;
+}
+
+footer > h1 {
+  margin-left: 100px;
+  margin-right: 200px;
+  font-size: 95px;
+}
+
+footer div > h1:last-child {
+  margin-right: 100px;
+}
+
 
 
 /* Game1.js */

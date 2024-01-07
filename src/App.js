@@ -17,9 +17,10 @@ function App() {
         <Route
           path="/game"
           element={
+            <div className ='web'>
             <div className="webView">
               <header>
-                <h2>종합 게임</h2>
+                {/* <h2>C o m p r e h e n s i v e&nbsp;&nbsp; G a m e 🎮</h2> */}
               </header>
               <div className="main">
                 <div className="main_content">
@@ -51,9 +52,15 @@ function App() {
                 </div>
               </div>
               <footer>
-                <h2>footer</h2>
+                {/* <h1>🕹️</h1> */}
+                <div>
+                  {/* <h1> 🔴 🟡 🔵</h1> */}
+                  {/* <h1>🔴 🟡 🔵</h1> */}
+                </div>
               </footer>
             </div>
+            </div>
+
           }
         >
           <Route path="/game" element={<Game1 />}/>
