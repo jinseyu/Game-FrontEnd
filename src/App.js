@@ -9,7 +9,6 @@ import Button from "react-bootstrap/Button";
 import { Link, Outlet, Route, Routes, useNavigate } from "react-router-dom";
 
 function App() {
-
   return (
     <div className="App">
       <Routes>

@@ -7,13 +7,13 @@ function Game2() {
   let [start, setStart] = useState(true);
   var [clickedCell, setClickedCell] = useState([]); // 클릭한 칸의 좌표
   let [color, setColor] = useState(""); // 현재 돌의 색상
-  var [modal, setModal] = useState(false); // 다시하기 모달창
+  let [modal_wht, setModal_wht] = useState(false); // 다시하기 모달창 흰
+  let [modal_blk, setModal_blk] = useState(false); // 다시하기 모달창 흑
   var [alert, setAlert] = useState(false); // 3-3 금지 알림
   var [table, setTable] = useState(false); // 오목판 전체 상태
 
 
   const handleCellClick = (i, j) => {
-
     // 현재 클릭된 셀의 돌 색을 저장
     const newColor = color === "black" ? "white" : "black"; // 다음에 나올 돌 색
     
@@ -46,7 +46,7 @@ function Game2() {
     console.log((i -1) + "," + (j-1));
     console.log(encodeGameBoard());
 
-    axios.post("http://15.164.164.15:8080/omok/place", { // 임시 서버
+    axios.post("http://15.164.164.15:8080/omok/place", { 
         color: newColor === "black" ? "1" : "2", // 1이면 흑, 2이면 백
         // 왼쪽 위 (0,0) 기준
         location : (i -1) + "," + (j-1),
@@ -61,6 +61,19 @@ function Game2() {
 
         // 현재 클릭된 돌의 색상을 변경
         setColor(newColor);
+
+
+        //  if (res.data == '33'){
+        //   // setAlert(true)
+        // } 
+
+        // 각 돌 승리시 승리 모달창 띄움
+        if(res.data == '백돌 승리입니다'){
+          setModal_wht(true);
+        }
+        if(res.data == '흑돌 승리입니다') {
+          setModal_blk(true);
+        }
 
         console.log(res.data);
       })
@@ -95,14 +108,16 @@ function Game2() {
   
     // 다시 하기 버튼 클릭 시 modal 값을 false로 변경
     const resetBtn = () => {
-      setModal(false);
+      setModal_wht(false);
+      setModal_blk(false);
       setTable(true);
     };
 
   return (
     <>
       <div>
-      {modal ? <Modal reset={resetBtn}/> : null}
+      {modal_wht ? <Modal_wht reset={resetBtn}/> : null}
+      {modal_blk ? <Modal_blk reset={resetBtn}/> : null}
       {alert ? <Caution/> : null}
 
       {start === true ? <p>* 흑돌 먼저 시작 !</p> : <p>&nbsp;</p>}
@@ -110,7 +125,6 @@ function Game2() {
       {table ? window.location.reload('/game/2') : ''}
       
         <table className="tb2" onClick={() => { 
-        // return setModal(true)  // 임시로 table 클릭 시 다시하기 모달창 나오도록
         // return setAlert(true) // 임시로 table 클릭 시 3-3 경고창 나오도록
       }}>
           <tbody>
@@ -138,13 +152,25 @@ function Game2() {
   );
 }
 
-{/* 다시 하기 모달창 */}
-function Modal(props){
+{/* 다시 하기 모달창 - 백 돌 승리시 */}
+function Modal_wht(props){
   return (
     <>
       <div style={{background: "white", width: "190px",height: "145px",borderRadius: "10px",padding: "20px", position: "absolute",margin: "20% 33%"}}>
-        <p style={{ marginBottom: "40px", fontSize: "17px" }}>🏆️ 흰 돌 승리! </p>
-        <button style={{  marginBottom: "30px", border: "none",height: "35px",background: "#3369fe", color: "#eee", borderRadius: "5px"}}
+        <p style={{ marginBottom: "40px", fontSize: "17px" }}>🏆️ 백 돌 승리! </p>
+        <button style={{  marginBottom: "30px", border: "none",height: "35px", background: "#3369fe", color: "#eee", borderRadius: "5px"}}
+                onClick={props.reset}>다시 하기</button>
+      </div>
+    </>
+  )
+}
+{/* 다시 하기 모달창 - 흑 돌 승리시 */}
+function Modal_blk(props){
+  return (
+    <>
+      <div style={{background: "white", width: "190px",height: "145px",borderRadius: "10px",padding: "20px", position: "absolute",margin: "20% 33%"}}>
+        <p style={{ marginBottom: "40px", fontSize: "17px" }}>🏆️ 흑 돌 승리! </p>
+        <button style={{  marginBottom: "30px", border: "none",height: "35px", background: "#3369fe", color: "#eee", borderRadius: "5px"}}
                 onClick={props.reset}>다시 하기</button>
       </div>
     </>
